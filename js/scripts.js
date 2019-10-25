@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("form#quiz").submit(function(event) {
+
     event.preventDefault();
 
     var animal = $("input:radio[name=animal]:checked").val();
@@ -12,14 +13,14 @@ $(document).ready(function() {
 
     var color = $("input:radio[name=color]:checked").val();
 
-    var result = ();
+    console.log("animal-" + animal);
 
     if (animal === cat || animal === dog) {
       result = ("Ruby")
        }
 
     else if (animal === walrus) {
-      result = ("C++"")
+      result = ("C++")
     }
 
     else if (color === red || color === blue) {
@@ -39,7 +40,7 @@ $(document).ready(function() {
     }
 
     else {
-      $('default').show();
+      $("basic").show();
     }
 
     $("#output").text(result, result1, result2);
