@@ -12,9 +12,36 @@ $(document).ready(function() {
 
     var color = $("input:radio[name=color]:checked").val();
 
+    var result = ();
+
     if (animal === cat || animal === dog) {
-      
+      result = ("Ruby")
+       }
+
+    else if (animal === walrus) {
+      result = ("C++"")
     }
+
+    else if (color === red || color === blue) {
+      result1 = ("Swift")
+    }
+
+    else if (color === green) {
+      result1 = ("Python")
+    }
+
+    else if (problem === yes) {
+      result2 = ("React")
+    }
+
+    else if (problem === no) {
+      result2 = ("GO")
+    }
+
+    else {
+      $('default').show();
+    }
+
 
   });
 });
