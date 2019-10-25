@@ -42,6 +42,7 @@ $(document).ready(function() {
       $('default').show();
     }
 
+    $("#output").text(result, result1, result2);
 
   });
 });
