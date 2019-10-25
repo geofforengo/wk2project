@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     var color = $("input:radio[name=color]:checked").val();
 
-    console.log("animal-" + animal);
+console.log("animal-" + animal);
 
     if (animal === cat || animal === dog) {
       result = ("Ruby")
@@ -43,7 +43,9 @@ $(document).ready(function() {
       $("basic").show();
     }
 
-    $("#output").text(result, result1, result2);
+    var results = (result, result1, result2);
+
+    $("#output").text(results);
 
   });
 });
