@@ -1,7 +1,6 @@
 $(document).ready(function() {
   $("form#quiz").submit(function(event) {
 
-    event.preventDefault();
 
     var animal = $("input:radio[name=animal]:checked").val();
 
@@ -15,31 +14,19 @@ $(document).ready(function() {
 
 console.log("animal-" + animal);
 
-    if (animal === cat || animal === dog) {
+    if (animal === "cat" || animal === "dog") {
       result = ("Ruby")
-       }
-
-    else if (animal === walrus) {
+    } else if (animal === "walrus") {
       result = ("C++")
-    }
-
-    else if (color === red || color === blue) {
+    } else if (color === "red" || color === "blue") {
       result1 = ("Swift")
-    }
-
-    else if (color === green) {
+    } else if (color === "green") {
       result1 = ("Python")
-    }
-
-    else if (problem === yes) {
+    } else if (problem === "yes") {
       result2 = ("React")
-    }
-
-    else if (problem === no) {
+    } else if (problem === "no") {
       result2 = ("GO")
-    }
-
-    else {
+    } else {
       $("basic").show();
     }
 
@@ -47,5 +34,6 @@ console.log("animal-" + animal);
 
     $("#output").text(results);
 
+    event.preventDefault();
   });
 });
