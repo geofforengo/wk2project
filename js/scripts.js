@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("form#quiz").submit(function(event) {
+    event.preventDefault();
 
 
     var animal = $("input:radio[name=animal]:checked").val();
@@ -12,7 +13,10 @@ $(document).ready(function() {
 
     var color = $("input:radio[name=color]:checked").val();
 
-console.log("animal-" + animal);
+    var result = ();
+    var result1 = ();
+    var result2 = ();
+    console.log("animal-" + animal);
 
     if (animal === "cat" || animal === "dog") {
       result = ("Ruby")
@@ -31,9 +35,8 @@ console.log("animal-" + animal);
     }
 
     var results = (result, result1, result2);
-
+    console.log(animal, time, time, problem, color);
     $("#output").text(results);
 
-    event.preventDefault();
   });
 });
