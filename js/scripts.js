@@ -13,10 +13,10 @@ $(document).ready(function() {
 
     var color = $("input:radio[name=color]:checked").val();
 
-    var result = ();
-    var result1 = ();
-    var result2 = ();
-    console.log("animal-" + animal);
+    var result = [];
+    var result1 = [];
+    var result2 = [];
+
 
     if (animal === "cat" || animal === "dog") {
       result = ("Ruby")
@@ -34,9 +34,9 @@ $(document).ready(function() {
       $("basic").show();
     }
 
-    var results = (result, result1, result2);
-    console.log(animal, time, time, problem, color);
-    $("#output").text(results);
+    var results = [result, result1, result2];
+    console.log(animal, time, problem, frustrate, color);
+    $("#output").append(results);
 
   });
 });
