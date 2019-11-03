@@ -14,29 +14,25 @@ $(document).ready(function() {
     var color = $("input:radio[name=color]:checked").val();
 
     var result = [];
-    var result1 = [];
-    var result2 = [];
-
 
     if (animal === "cat" || animal === "dog") {
-      result = ("Ruby")
-    } else if (animal === "walrus") {
-      result = ("C++")
-    } else if (color === "red" || color === "blue") {
-      result1 = ("Swift")
-    } else if (color === "green") {
-      result1 = ("Python")
-    } else if (problem === "yes") {
-      result2 = ("React")
-    } else if (problem === "no") {
-      result2 = ("GO")
+      result.push("Ruby, ")
+    } if (animal === "walrus") {
+      result.push("C++, ")
+    } if (color === "red" || color === "blue") {
+      result.push("Swift, ")
+    } if (color === "green") {
+      result.push("Python, ")
+    } if (problem === "yes") {
+      result.push("React")
+    } if (problem === "no") {
+      result.push("GO")
     } else {
-      $("basic").show();
+
     }
 
-    var results = [result, result1, result2];
-    console.log(animal, time, problem, frustrate, color);
-    $("#output").append(results);
+
+    $("#output").append(result);
 
   });
 });
