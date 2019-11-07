@@ -1,8 +1,9 @@
 $(document).ready(function() {
   $("form#quiz").submit(function(event) {
+
     event.preventDefault();
 
-
+    //Edited 11/7/19
     var animal = $("input:radio[name=animal]:checked").val();
 
     var time = $("input:radio[name=time]:checked").val();
@@ -16,23 +17,23 @@ $(document).ready(function() {
     var result = [];
 
     if (animal === "cat" || animal === "dog") {
-      result.push("Ruby, ")
-    } if (animal === "walrus") {
-      result.push("C++, ")
-    } if (color === "red" || color === "blue") {
-      result.push("Swift, ")
-    } if (color === "green") {
-      result.push("Python, ")
-    } if (problem === "yes") {
+      result.push("Ruby")
+    } else if (animal === "walrus") {
+      result.push("C++")
+    } else if (animal === "cat" || animal === "dog" && color === "red" || color === "blue") {
+      result.push("Swift")
+    } else if (animal === "walrus" && color === "green") {
+      result.push("Python")
+    } else if (animal === "walrus" && color === "green" && problem === "yes") {
       result.push("React")
-    } if (problem === "no") {
+    } else if (animal === "cat" || animal === "dog" && color === "red" || color === "blue" && problem  === "no") {
       result.push("GO")
     } else {
-
+      result.push("Rust")
     }
 
 
-    $("#output").append(result);
-
+    $("#output").text(result);
+    location.reload();
   });
 });
