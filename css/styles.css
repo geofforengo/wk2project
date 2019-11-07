@@ -10,3 +10,11 @@
 .column {
   flex: 50%;
 }
+
+.body {
+  background-color: light grey;
+}
+
+#output {
+  display: none;
+}

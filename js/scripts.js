@@ -18,9 +18,7 @@ $(document).ready(function() {
 
     if (animal === "cat" || animal === "dog") {
       result.push("Ruby")
-    } else if (animal === "walrus") {
-      result.push("C++")
-    } else if (animal === "cat" || animal === "dog" && color === "red" || color === "blue") {
+    } else if (animal === "cat" || animal === "dog" && color === "red") {
       result.push("Swift")
     } else if (animal === "walrus" && color === "green") {
       result.push("Python")
@@ -28,12 +26,14 @@ $(document).ready(function() {
       result.push("React")
     } else if (animal === "cat" || animal === "dog" && color === "red" || color === "blue" && problem  === "no") {
       result.push("GO")
+    } else if (animal === "walrus") {
+      result.push("C++")
     } else {
       result.push("Rust")
     }
 
-
-    $("#output").text(result);
-    location.reload();
+    $("#output").show();
+    $("#answer").text(result);
+    // location.reload();
   });
 });
