@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     event.preventDefault();
 
-    //Edited 11/7/19
+    //Edited 11/10/19
     var animal = $("input:radio[name=animal]:checked").val();
 
     var time = $("input:radio[name=time]:checked").val();
@@ -34,6 +34,6 @@ $(document).ready(function() {
 
     $("#output").show();
     $("#answer").text(result);
-    // location.reload();
+    
   });
 });
